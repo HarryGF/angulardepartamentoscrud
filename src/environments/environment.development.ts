@@ -1,3 +1,3 @@
 export const environment = {
-    urlApiDepartamentos: "https://apicruddepartamentoscore.azurewebsites.net/ "
+    urlApiDepartamentos: "https://apicruddepartamentoscore.azurewebsites.net/"
 };
