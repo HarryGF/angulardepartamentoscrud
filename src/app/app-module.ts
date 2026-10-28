@@ -7,9 +7,18 @@ import { HomeComponent } from './components/home-component/home-component';
 import { provideHttpClient } from '@angular/common/http';
 import { ServiceDepartamentos } from './services/service.departamentos';
 import { CreateComponent } from './components/create-component/create-component';
+import { DetallesComponent } from './components/detalles-component/detalles-component';
+import { UpdateComponent } from './components/update-component/update-component';
 
 @NgModule({
-  declarations: [App, MenuComponent, HomeComponent, CreateComponent],
+  declarations: [
+    App,
+    MenuComponent,
+    HomeComponent,
+    CreateComponent,
+    DetallesComponent,
+    UpdateComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners(), provideHttpClient(), ServiceDepartamentos],
   bootstrap: [App],

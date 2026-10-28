@@ -4,6 +4,9 @@
             <th>Id Departamento</th>
             <th>Nombre</th>
             <th>Localidad</th>
+            <th></th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -12,6 +15,28 @@
                 <td>{{dept.numero}}</td>
                 <td>{{dept.nombre}}</td>
                 <td>{{dept.localidad}}</td>
+                <td>
+                    <a [routerLink]="['/detalles/'+dept.numero+'/'+dept.nombre+'/'+dept.localidad]"
+                    class="btn btn-light">
+                        Detalles
+                    </a>
+                    <!-- Esto es la forma con parametros sin usar queryParams, pero no es recomendable porque se ve la informacion en la url
+                        <a [routerLink]="['/details', dep.numero, dep.nombre, dep.localidad]">Detalles</a>
+ 
+                     -->
+                </td>
+                <td>
+                    <a [routerLink]="['/update/'+dept.numero]"
+                    class="btn btn-info">
+                        Edit
+                    </a>
+                </td>
+                <td>
+                    <button class="btn btn-danger" 
+                    (click)="deleteDepartamento(dept.numero)">
+                        Eliminar
+                    </button>
+                </td>
             </tr>
         }
     </tbody>

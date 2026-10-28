@@ -1,0 +1,20 @@
+<h1>Update Departamento</h1>
+@if (departamento) {
+  <form>
+      <label>Id departamento: </label>
+      <input type="number" name="cajaId" #cajaId class="form-control"
+             [value]="departamento.numero" disabled/>
+
+      <label>Nombre: </label>
+      <input type="text" name="cajaNombre" #cajaNombre class="form-control"
+             [value]="departamento.nombre"/>
+
+      <label>Localidad: </label>
+      <input type="text" name="cajaLocalidad" #cajaLocalidad class="form-control"
+             [value]="departamento.localidad"/>
+
+      <button type="button" class="btn btn-warning mt-2" (click)="updateDepartamento()">
+          Editar
+      </button>
+  </form>
+}
